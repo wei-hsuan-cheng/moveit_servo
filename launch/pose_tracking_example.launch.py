@@ -93,7 +93,9 @@ def generate_launch_description():
     panda_arm_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["panda_arm_controller", "-c", "/controller_manager"],
+        # arguments=["panda_arm_controller", "-c", "/controller_manager"],
+        arguments=["panda_arm_controller_unchained", "-c", "/controller_manager"],
+        
     )
 
     return LaunchDescription(
